@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Bar - Barra de Belleza</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #333; min-height: 100vh; }
+        .container { max-width: 400px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .logo { font-size: 2rem; font-weight: bold; color: #d35400; margin-bottom: 10px; }
+        .tagline { font-size: 0.9rem; color: #666; }
+        .nav { display: flex; justify-content: space-around; margin-bottom: 30px; background: white; border-radius: 25px; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav a { color: #d35400; text-decoration: none; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; font-size: 0.8rem; font-weight: 500; }
+        .nav a:hover, .nav a.active { background: #d35400; color: white; }
+        .hero { text-align: center; margin-bottom: 30px; background: white; padding: 25px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 1.8rem; margin-bottom: 15px; color: #d35400; }
+        .hero p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+        .btn { background: linear-gradient(45deg, #d35400, #e67e22); color: white; padding: 12px 30px; border: none; border-radius: 25px; font-weight: bold; text-decoration: none; display: inline-block; transition: all 0.3s ease; box-shadow: 0 3px 10px rgba(211, 84, 0, 0.3); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4); }
+        .express { margin-bottom: 30px; }
+        .express h2 { font-size: 1.3rem; margin-bottom: 20px; text-align: center; color: #d35400; }
+        .express-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .express-item { background: white; padding: 15px; border-radius: 15px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .express-item h3 { font-size: 0.9rem; margin-bottom: 5px; color: #d35400; }
+        .express-item p { font-size: 0.8rem; color: #666; }
+        .walk-in { background: linear-gradient(45deg, #d35400, #e67e22); color: white; padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 20px; }
+        .walk-in h3 { margin-bottom: 10px; }
+        .walk-in p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 15px; }
+        .hours { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .hours h3 { text-align: center; margin-bottom: 15px; color: #d35400; }
+        .hours-list { display: flex; flex-direction: column; gap: 10px; }
+        .hours-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 10px; }
+        .hours-item .day { font-size: 0.9rem; color: #333; }
+        .hours-item .time { font-weight: bold; color: #d35400; }
+        .contact { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .contact h3 { margin-bottom: 15px; color: #d35400; }
+        .contact-info { display: flex; flex-direction: column; gap: 10px; }
+        .contact-item { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Beauty Bar</div>
+            <div class="tagline">Barra de Belleza</div>
+        </div>
+        <nav class="nav">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Express</a>
+            <a href="#">Horarios</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="hero">
+            <h1>Belleza Express</h1>
+            <p>Servicios rápidos y de calidad</p>
+            <a href="#" class="btn">Walk-in Disponible</a>
+        </div>
+        <div class="express">
+            <h2>Servicios Express</h2>
+            <div class="express-grid">
+                <div class="express-item">
+                    <h3>Manicura Rápida</h3>
+                    <p>15 min - 12€</p>
+                </div>
+                <div class="express-item">
+                    <h3>Corte Express</h3>
+                    <p>20 min - 18€</p>
+                </div>
+                <div class="express-item">
+                    <h3>Maquillaje</h3>
+                    <p>25 min - 25€</p>
+                </div>
+                <div class="express-item">
+                    <h3>Depilación</h3>
+                    <p>10 min - 15€</p>
+                </div>
+            </div>
+        </div>
+        <div class="walk-in">
+            <h3>🚶‍♀️ Walk-in Bienvenido</h3>
+            <p>No necesitas cita previa, ven cuando quieras</p>
+            <a href="#" class="btn" style="background: white; color: #d35400;">Ver Disponibilidad</a>
+        </div>
+        <div class="hours">
+            <h3>Horarios</h3>
+            <div class="hours-list">
+                <div class="hours-item">
+                    <span class="day">Lunes - Viernes</span>
+                    <span class="time">9:00 - 21:00</span>
+                </div>
+                <div class="hours-item">
+                    <span class="day">Sábados</span>
+                    <span class="time">9:00 - 20:00</span>
+                </div>
+                <div class="hours-item">
+                    <span class="day">Domingos</span>
+                    <span class="time">10:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h3>Contacto</h3>
+            <div class="contact-info">
+                <div class="contact-item"><span>📞</span><span>+34 600 123 456</span></div>
+                <div class="contact-item"><span>📍</span><span>Calle Principal 123</span></div>
+                <div class="contact-item"><span>🕒</span><span>Abierto 7 días</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

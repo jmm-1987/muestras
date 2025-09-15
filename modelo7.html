@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Center - Depilación Láser</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; min-height: 100vh; }
+        .container { max-width: 400px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .logo { font-size: 2rem; font-weight: bold; color: #2c3e50; margin-bottom: 10px; }
+        .tagline { font-size: 0.9rem; color: #666; }
+        .nav { display: flex; justify-content: space-around; margin-bottom: 30px; background: white; border-radius: 25px; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav a { color: #2c3e50; text-decoration: none; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; font-size: 0.8rem; font-weight: 500; }
+        .nav a:hover, .nav a.active { background: #2c3e50; color: white; }
+        .hero { text-align: center; margin-bottom: 30px; background: white; padding: 25px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .hero h1 { font-size: 1.8rem; margin-bottom: 15px; color: #2c3e50; }
+        .hero p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+        .btn { background: linear-gradient(45deg, #2c3e50, #34495e); color: white; padding: 12px 30px; border: none; border-radius: 25px; font-weight: bold; text-decoration: none; display: inline-block; transition: all 0.3s ease; box-shadow: 0 3px 10px rgba(44, 62, 80, 0.3); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(44, 62, 80, 0.4); }
+        .technology { margin-bottom: 30px; }
+        .technology h2 { font-size: 1.3rem; margin-bottom: 20px; text-align: center; color: #2c3e50; }
+        .tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .tech-item { background: white; padding: 15px; border-radius: 15px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .tech-item h3 { font-size: 0.9rem; margin-bottom: 5px; color: #2c3e50; }
+        .tech-item p { font-size: 0.8rem; color: #666; }
+        .results { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .results h3 { text-align: center; margin-bottom: 15px; color: #2c3e50; }
+        .result-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 10px; margin-bottom: 10px; }
+        .result-item .area { font-size: 0.9rem; color: #333; }
+        .result-item .sessions { font-weight: bold; color: #2c3e50; }
+        .consultation { background: linear-gradient(45deg, #2c3e50, #34495e); color: white; padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 20px; }
+        .consultation h3 { margin-bottom: 10px; }
+        .consultation p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 15px; }
+        .contact { background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .contact h3 { margin-bottom: 15px; color: #2c3e50; }
+        .contact-info { display: flex; flex-direction: column; gap: 10px; }
+        .contact-item { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Laser Center</div>
+            <div class="tagline">Depilación Láser</div>
+        </div>
+        <nav class="nav">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Tecnología</a>
+            <a href="#">Resultados</a>
+            <a href="#">Consultas</a>
+        </nav>
+        <div class="hero">
+            <h1>Tecnología Avanzada</h1>
+            <p>Depilación láser con la última tecnología</p>
+            <a href="#" class="btn">Consulta Gratuita</a>
+        </div>
+        <div class="technology">
+            <h2>Nuestra Tecnología</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>Láser Diodo</h3>
+                    <p>Eficaz y seguro</p>
+                </div>
+                <div class="tech-item">
+                    <h3>IPL</h3>
+                    <p>Luz pulsada</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Alexandrita</h3>
+                    <p>Para pieles claras</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Nd:YAG</h3>
+                    <p>Para pieles oscuras</p>
+                </div>
+            </div>
+        </div>
+        <div class="results">
+            <h3>Resultados Esperados</h3>
+            <div class="result-item">
+                <span class="area">Axilas</span>
+                <span class="sessions">6-8 sesiones</span>
+            </div>
+            <div class="result-item">
+                <span class="area">Piernas</span>
+                <span class="sessions">8-12 sesiones</span>
+            </div>
+            <div class="result-item">
+                <span class="area">Bikini</span>
+                <span class="sessions">6-10 sesiones</span>
+            </div>
+            <div class="result-item">
+                <span class="area">Rostro</span>
+                <span class="sessions">8-15 sesiones</span>
+            </div>
+        </div>
+        <div class="consultation">
+            <h3>Consulta Gratuita</h3>
+            <p>Evaluación personalizada sin compromiso</p>
+            <a href="#" class="btn" style="background: white; color: #2c3e50;">Solicitar Consulta</a>
+        </div>
+        <div class="contact">
+            <h3>Contacto</h3>
+            <div class="contact-info">
+                <div class="contact-item"><span>📞</span><span>+34 600 123 456</span></div>
+                <div class="contact-item"><span>📍</span><span>Calle Principal 123</span></div>
+                <div class="contact-item"><span>🕒</span><span>Lun-Sáb: 9:00-20:00</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

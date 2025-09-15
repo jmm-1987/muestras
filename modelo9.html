@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Spa - Spa de Lujo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; min-height: 100vh; }
+        .container { max-width: 400px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .logo { font-size: 2rem; font-weight: bold; margin-bottom: 10px; }
+        .tagline { font-size: 0.9rem; opacity: 0.8; }
+        .nav { display: flex; justify-content: space-around; margin-bottom: 30px; background: rgba(255,255,255,0.1); border-radius: 25px; padding: 10px; }
+        .nav a { color: white; text-decoration: none; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; font-size: 0.8rem; }
+        .nav a:hover, .nav a.active { background: white; color: #667eea; }
+        .hero { text-align: center; margin-bottom: 30px; }
+        .hero h1 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 20px; }
+        .btn { background: white; color: #667eea; padding: 12px 30px; border: none; border-radius: 25px; font-weight: bold; text-decoration: none; display: inline-block; transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .treatments { margin-bottom: 30px; }
+        .treatments h2 { font-size: 1.3rem; margin-bottom: 20px; text-align: center; }
+        .treatment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .treatment-item { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 15px; text-align: center; }
+        .treatment-item h3 { font-size: 0.9rem; margin-bottom: 5px; }
+        .treatment-item p { font-size: 0.8rem; opacity: 0.8; }
+        .vip { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; margin-bottom: 20px; }
+        .vip h3 { margin-bottom: 15px; text-align: center; }
+        .vip-list { display: flex; flex-direction: column; gap: 10px; }
+        .vip-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; }
+        .vip-item .service { font-size: 0.9rem; }
+        .vip-item .price { font-weight: bold; }
+        .premium { background: linear-gradient(45deg, #ffd700, #ffed4e); color: #333; padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 20px; }
+        .premium h3 { margin-bottom: 10px; }
+        .premium p { font-size: 0.9rem; margin-bottom: 15px; }
+        .contact { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center; }
+        .contact h3 { margin-bottom: 15px; }
+        .contact-info { display: flex; flex-direction: column; gap: 10px; }
+        .contact-item { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Luxury Spa</div>
+            <div class="tagline">Spa de Lujo</div>
+        </div>
+        <nav class="nav">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Tratamientos</a>
+            <a href="#">VIP</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="hero">
+            <h1>Relax y Bienestar</h1>
+            <p>Experiencias de lujo para tu bienestar</p>
+            <a href="#" class="btn">Reservar Experiencia</a>
+        </div>
+        <div class="treatments">
+            <h2>Tratamientos Premium</h2>
+            <div class="treatment-grid">
+                <div class="treatment-item">
+                    <h3>Masajes</h3>
+                    <p>Relajantes</p>
+                </div>
+                <div class="treatment-item">
+                    <h3>Faciales</h3>
+                    <p>Anti-edad</p>
+                </div>
+                <div class="treatment-item">
+                    <h3>Corporales</h3>
+                    <p>Exfoliantes</p>
+                </div>
+                <div class="treatment-item">
+                    <h3>Manos y Pies</h3>
+                    <p>Lujo</p>
+                </div>
+            </div>
+        </div>
+        <div class="vip">
+            <h3>Servicios VIP</h3>
+            <div class="vip-list">
+                <div class="vip-item">
+                    <span class="service">Tratamiento VIP</span>
+                    <span class="price">150€</span>
+                </div>
+                <div class="vip-item">
+                    <span class="service">Spa Day Completo</span>
+                    <span class="price">200€</span>
+                </div>
+                <div class="vip-item">
+                    <span class="service">Masaje de 2h</span>
+                    <span class="price">120€</span>
+                </div>
+                <div class="vip-item">
+                    <span class="service">Facial Premium</span>
+                    <span class="price">80€</span>
+                </div>
+            </div>
+        </div>
+        <div class="premium">
+            <h3>🌟 Experiencia Premium</h3>
+            <p>Tratamientos exclusivos con productos de lujo</p>
+            <a href="#" class="btn" style="background: #667eea; color: white;">Solicitar Información</a>
+        </div>
+        <div class="contact">
+            <h3>Contacto</h3>
+            <div class="contact-info">
+                <div class="contact-item"><span>📞</span><span>+34 600 123 456</span></div>
+                <div class="contact-item"><span>📍</span><span>Calle Principal 123</span></div>
+                <div class="contact-item"><span>🕒</span><span>Lun-Sáb: 9:00-20:00</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
