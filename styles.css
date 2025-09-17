@@ -9,13 +9,15 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden;
+    overflow-x: auto;
     position: relative;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 body::before {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -44,7 +46,7 @@ body::before {
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -786,42 +786,6 @@
         // Añadir efectos de sonido visuales al botón principal
         document.querySelector('.cta-button').addEventListener('click', playVisualSound);
         
-        // Efectos de cursor personalizado
-        document.addEventListener('mousemove', function(e) {
-            const cursor = document.querySelector('.cursor');
-            if (!cursor) {
-                const newCursor = document.createElement('div');
-                newCursor.className = 'cursor';
-                newCursor.style.position = 'fixed';
-                newCursor.style.width = '20px';
-                newCursor.style.height = '20px';
-                newCursor.style.background = 'radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent)';
-                newCursor.style.borderRadius = '50%';
-                newCursor.style.pointerEvents = 'none';
-                newCursor.style.zIndex = '9999';
-                newCursor.style.transition = 'transform 0.1s ease';
-                document.body.appendChild(newCursor);
-            }
-            
-            const cursorElement = document.querySelector('.cursor');
-            cursorElement.style.left = e.clientX - 10 + 'px';
-            cursorElement.style.top = e.clientY - 10 + 'px';
-        });
-        
-        // Efectos de hover en el cursor
-        document.querySelectorAll('.service-card, .cta-button').forEach(element => {
-            element.addEventListener('mouseenter', function() {
-                const cursor = document.querySelector('.cursor');
-                cursor.style.transform = 'scale(1.5)';
-                cursor.style.background = 'radial-gradient(circle, rgba(236, 72, 153, 0.8), transparent)';
-            });
-            
-            element.addEventListener('mouseleave', function() {
-                const cursor = document.querySelector('.cursor');
-                cursor.style.transform = 'scale(1)';
-                cursor.style.background = 'radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent)';
-            });
-        });
     </script>
 </body>
 </html>
