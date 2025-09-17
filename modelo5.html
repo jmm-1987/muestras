@@ -1,105 +1,296 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair Studio - Peluquería Moderna</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; min-height: 100vh; }
-        .container { max-width: 400px; margin: 0 auto; padding: 20px; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .logo { font-size: 2rem; font-weight: bold; margin-bottom: 10px; }
-        .tagline { font-size: 0.9rem; opacity: 0.8; }
-        .nav { display: flex; justify-content: space-around; margin-bottom: 30px; background: rgba(255,255,255,0.1); border-radius: 25px; padding: 10px; }
-        .nav a { color: white; text-decoration: none; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; font-size: 0.8rem; }
-        .nav a:hover, .nav a.active { background: white; color: #667eea; }
-        .hero { text-align: center; margin-bottom: 30px; }
-        .hero h1 { font-size: 1.8rem; margin-bottom: 15px; }
-        .hero p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 20px; }
-        .btn { background: white; color: #667eea; padding: 12px 30px; border: none; border-radius: 25px; font-weight: bold; text-decoration: none; display: inline-block; transition: all 0.3s ease; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .portfolio { margin-bottom: 30px; }
-        .portfolio h2 { font-size: 1.3rem; margin-bottom: 20px; text-align: center; }
-        .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .portfolio-item { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 15px; text-align: center; }
-        .portfolio-item h3 { font-size: 0.9rem; margin-bottom: 5px; }
-        .portfolio-item p { font-size: 0.8rem; opacity: 0.8; }
-        .team { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; margin-bottom: 20px; }
-        .team h3 { margin-bottom: 15px; text-align: center; }
-        .team-member { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        .team-avatar { width: 40px; height: 40px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #667eea; font-weight: bold; }
-        .team-info h4 { font-size: 0.9rem; margin-bottom: 5px; }
-        .team-info p { font-size: 0.8rem; opacity: 0.8; }
-        .contact { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center; }
-        .contact h3 { margin-bottom: 15px; }
-        .contact-info { display: flex; flex-direction: column; gap: 10px; }
-        .contact-item { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.9rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Belleza Web</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('fondo_pelu1.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    /* Overlay para mejorar la legibilidad del texto */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 240, 245, 0.4);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      filter: brightness(0) invert(1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .container {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: transparent;
+      padding: 2rem 1.5rem;
+      border-radius: 25px;
+      box-shadow: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+      transform: rotate(45deg) translate(50%, 50%);
+    }
+
+    .card img {
+      width: 60px;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 4px 8px rgba(255, 105, 180, 0.2));
+    }
+
+    .card:hover img {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+    }
+
+    .btn {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #ff1493, #dc143c);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 35px rgba(255, 105, 180, 0.5);
+    }
+
+    /* Elementos decorativos flotantes */
+    .decorative-elements {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .floating-icon {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.6;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .icon-1 {
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .icon-2 {
+      top: 20%;
+      right: 15%;
+      animation-delay: 1s;
+    }
+
+    .icon-3 {
+      top: 60%;
+      left: 5%;
+      animation-delay: 2s;
+    }
+
+    .icon-4 {
+      bottom: 20%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+
+    .icon-5 {
+      top: 40%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    .icon-6 {
+      bottom: 30%;
+      left: 50%;
+      animation-delay: 5s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(-20px) rotate(10deg);
+        opacity: 0.8;
+      }
+    }
+
+    /* Responsive - ocultar elementos decorativos en móviles */
+    @media (max-width: 768px) {
+      .floating-icon {
+        font-size: 1.5rem;
+        opacity: 0.4;
+      }
+      
+      .icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6 {
+        animation: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .decorative-elements {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">Hair Studio</div>
-            <div class="tagline">Peluquería Moderna</div>
-        </div>
-        <nav class="nav">
-            <a href="#" class="active">Inicio</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Equipo</a>
-            <a href="#">Contacto</a>
-        </nav>
-        <div class="hero">
-            <h1>Estilo y Tendencia</h1>
-            <p>Los mejores estilistas para tu look perfecto</p>
-            <a href="#" class="btn">Reservar Cita</a>
-        </div>
-        <div class="portfolio">
-            <h2>Nuestros Trabajos</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3>Cortes Modernos</h3>
-                    <p>Últimas tendencias</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Coloración</h3>
-                    <p>Técnicas avanzadas</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Peinados</h3>
-                    <p>Para ocasiones especiales</p>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Tratamientos</h3>
-                    <p>Cuidado del cabello</p>
-                </div>
-            </div>
-        </div>
-        <div class="team">
-            <h3>Nuestro Equipo</h3>
-            <div class="team-member">
-                <div class="team-avatar">A</div>
-                <div class="team-info">
-                    <h4>Ana García</h4>
-                    <p>Directora de Estilo</p>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="team-avatar">M</div>
-                <div class="team-info">
-                    <h4>María López</h4>
-                    <p>Especialista en Color</p>
-                </div>
-            </div>
-        </div>
-        <div class="contact">
-            <h3>Contacto</h3>
-            <div class="contact-info">
-                <div class="contact-item"><span>📞</span><span>+34 600 123 456</span></div>
-                <div class="contact-item"><span>📍</span><span>Calle Principal 123</span></div>
-                <div class="contact-item"><span>🕒</span><span>Lun-Sáb: 9:00-20:00</span></div>
-            </div>
-        </div>
+
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Logo Salon Belleza" class="logo-img">
+      <h1>Tu Logo Aquí</h1>
     </div>
+    <p>¿En qué podemos ayudarte hoy?</p>
+  </header>
+
+  <main class="container">
+    <div class="card" onclick="alert('Consultar horarios')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1045/1045276.png" alt="Horarios">
+      <h3>Consultar horarios</h3>
+    </div>
+    <div class="card" onclick="alert('Ver ubicación')">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Ubicación">
+      <h3>Ver ubicación</h3>
+    </div>
+    <div class="card" onclick="alert('Galería de trabajos')">
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Galería">
+      <h3>Galería de peinados</h3>
+    </div>
+    <div class="card" onclick="alert('Servicios y citas')">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Citas">
+      <h3>Servicios y citas</h3>
+    </div>
+  </main>
+
+  <a href="#" class="btn" onclick="alert('Ver mis citas')">Ver mis citas</a>
+
+  <!-- Elementos decorativos -->
+  <div class="decorative-elements">
+    <div class="floating-icon icon-1">✨</div>
+    <div class="floating-icon icon-2">💄</div>
+    <div class="floating-icon icon-3">🌸</div>
+    <div class="floating-icon icon-4">💅</div>
+    <div class="floating-icon icon-5">🎀</div>
+    <div class="floating-icon icon-6">💋</div>
+  </div>
+
 </body>
 </html>

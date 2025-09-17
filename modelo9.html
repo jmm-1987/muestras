@@ -6,7 +6,28 @@
     <title>Luxury Spa - Spa de Lujo</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; min-height: 100vh; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-image: url('fondo_pelu1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white; 
+            min-height: 100vh;
+        }
+
+        /* Overlay para mejorar la legibilidad del texto */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 240, 245, 0.4);
+            z-index: -1;
+        }
         .container { max-width: 400px; margin: 0 auto; padding: 20px; }
         .header { text-align: center; margin-bottom: 30px; }
         .logo { font-size: 2rem; font-weight: bold; margin-bottom: 10px; }
@@ -53,6 +74,7 @@
             <a href="#">Contacto</a>
         </nav>
         <div class="hero">
+            <img src="pelu3.png" alt="Spa de Lujo" style="width: 100%; max-width: 300px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
             <h1>Relax y Bienestar</h1>
             <p>Experiencias de lujo para tu bienestar</p>
             <a href="#" class="btn">Reservar Experiencia</a>

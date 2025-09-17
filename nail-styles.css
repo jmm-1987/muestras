@@ -1,0 +1,74 @@
+/* Model Card Zen - Fondo verde suave */
+.model-card-zen {
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4e6d4 25%, #c0d7c0 50%, #a8c8a8 75%, #90b990 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.model-card-zen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 195, 74, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(102, 187, 106, 0.08) 0%, transparent 50%);
+    animation: backgroundShift 25s ease-in-out infinite;
+    z-index: 1;
+}
+
+.model-card-zen .model-preview,
+.model-card-zen .model-actions {
+    position: relative;
+    z-index: 2;
+}
+
+/* Model Card Nail2 - Fondo rosa/magenta */
+.model-card-nail2 {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 25%, #fbcfe8 50%, #f9a8d4 75%, #f472b6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.model-card-nail2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(244, 114, 182, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(219, 39, 119, 0.08) 0%, transparent 50%);
+    animation: backgroundShift 25s ease-in-out infinite;
+    z-index: 1;
+}
+
+.model-card-nail2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(244, 114, 182, 0.3), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(236, 72, 153, 0.3), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(219, 39, 119, 0.3), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(244, 114, 182, 0.3), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(236, 72, 153, 0.3), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: stars 20s linear infinite;
+    z-index: 2;
+}
+
+.model-card-nail2 .model-preview,
+.model-card-nail2 .model-actions {
+    position: relative;
+    z-index: 3;
+}
