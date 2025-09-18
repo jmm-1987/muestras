@@ -13,6 +13,16 @@ function scrollToPricing() {
     });
 }
 
+function entrarAplicacion() {
+    // Aquí puedes cambiar la URL por la de tu aplicación
+    window.open('https://app.webestetica.com', '_blank');
+}
+
+function entrarPanelControl() {
+    // Aquí puedes cambiar la URL por la de tu panel de control
+    window.open('https://panel.webestetica.com', '_blank');
+}
+
 // Función para abrir WhatsApp
 function openWhatsApp() {
     const phoneNumber = '34600123456'; // Cambia este número por el tuyo
@@ -35,13 +45,23 @@ function handleScrollAnimations() {
     });
 }
 
-// Efecto parallax en el header
-function handleParallax() {
+// Efecto de scroll donde los modelos se comen la portada
+function handleScrollEffect() {
     const scrolled = window.pageYOffset;
     const header = document.querySelector('.header');
+    const modelsSection = document.querySelector('.models-section');
     
-    if (header) {
-        header.style.transform = `translateY(${scrolled * 0.5}px)`;
+    if (header && modelsSection) {
+        // Calcular el progreso del scroll (0 a 1)
+        const scrollProgress = Math.min(scrolled / window.innerHeight, 1);
+        
+        // Mover la sección de modelos hacia arriba gradualmente
+        const translateY = -scrolled;
+        modelsSection.style.transform = `translateY(${translateY}px)`;
+        
+        // Opcional: Ajustar la opacidad del header conforme se va "comiendo"
+        const headerOpacity = 1 - scrollProgress;
+        header.style.opacity = headerOpacity;
     }
 }
 
@@ -400,18 +420,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Añadir event listeners para scroll
     window.addEventListener('scroll', () => {
         handleScrollAnimations();
-        handleParallax();
+        handleScrollEffect();
     });
     
     // Añadir event listeners para redimensionamiento
     window.addEventListener('resize', optimizeForMobile);
     
-    // Efecto de typing en el título principal (opcional)
-    const mainTitle = document.querySelector('.hero h2');
-    if (mainTitle) {
-        const originalText = mainTitle.textContent;
-        typeWriter(mainTitle, originalText, 50);
-    }
     
     // Animar contadores cuando se vean los precios
     const pricingSection = document.getElementById('pricing');
