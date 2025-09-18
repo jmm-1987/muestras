@@ -15,6 +15,25 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Fondo con herramientas de peluquería para secciones blancas */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(135deg, rgba(255,255,255,0.30) 0%, rgba(248,249,250,0.30) 100%),
+        url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+    pointer-events: none;
+}
+
 body::before {
     content: '';
     position: absolute;
@@ -36,11 +55,7 @@ body::before {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(45, 45, 45, 0.8) 50%, rgba(64, 64, 64, 0.8) 100%), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -60,10 +75,15 @@ body::before {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-    animation: float 6s ease-in-out infinite;
+        radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.4), transparent),
+        radial-gradient(0.5px 0.5px at 90px 40px, rgba(255,255,255,0.5), transparent),
+        radial-gradient(0.5px 0.5px at 130px 80px, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 160px 30px, rgba(255,255,255,0.2), transparent);
+    background-repeat: repeat;
+    background-size: 300px 150px;
+    animation: sparkle 8s ease-in-out infinite;
+    z-index: 1;
 }
 
 .header::after {
@@ -73,10 +93,65 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    background: 
+        radial-gradient(0.5px 0.5px at 50px 50px, rgba(255,255,255,0.2), transparent),
+        radial-gradient(0.5px 0.5px at 100px 100px, rgba(255,255,255,0.3), transparent),
+        radial-gradient(0.3px 0.3px at 150px 25px, rgba(255,255,255,0.4), transparent),
+        radial-gradient(0.5px 0.5px at 200px 75px, rgba(255,255,255,0.2), transparent),
+        radial-gradient(0.3px 0.3px at 250px 50px, rgba(255,255,255,0.3), transparent);
+    background-repeat: repeat;
+    background-size: 400px 200px;
+    animation: sparkle 12s ease-in-out infinite reverse;
+    z-index: 2;
+}
+
+@keyframes headerZoom {
+    0%, 100% { 
+        background-size: 100% 100%;
+        transform: scale(1);
+    }
+    50% { 
+        background-size: 110% 110%;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        opacity: 0.2;
+        transform: translateY(0px) scale(1);
+    }
+    25% { 
+        opacity: 0.4;
+        transform: translateY(-2px) scale(1.05);
+    }
+    50% { 
     opacity: 0.3;
-    animation: shimmer 3s ease-in-out infinite;
-    z-index: 1;
+        transform: translateY(-1px) scale(0.98);
+    }
+    75% { 
+        opacity: 0.5;
+        transform: translateY(-3px) scale(1.02);
+    }
+}
+
+@keyframes darkSparkle {
+    0%, 100% { 
+        opacity: 0.3;
+        transform: translateY(0px) scale(1);
+    }
+    25% { 
+        opacity: 0.6;
+        transform: translateY(-1px) scale(1.02);
+    }
+    50% { 
+        opacity: 0.4;
+        transform: translateY(-0.5px) scale(0.99);
+    }
+    75% { 
+        opacity: 0.7;
+        transform: translateY(-1.5px) scale(1.01);
+    }
 }
 
 @keyframes shimmer {
@@ -178,6 +253,7 @@ body::before {
         transform: scale(1.02);
     }
 }
+
 
 
 /* Hero Section */
@@ -337,6 +413,7 @@ body::before {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .models-section::before {
@@ -408,6 +485,7 @@ body::before {
     position: relative;
     border: 1px solid rgba(255,255,255,0.2);
     backdrop-filter: blur(10px);
+    z-index: 3;
 }
 
 .model-card::before {
@@ -857,6 +935,7 @@ body::before {
     background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .features-section::before {
@@ -894,6 +973,7 @@ body::before {
     border: 1px solid rgba(255,255,255,0.2);
     position: relative;
     overflow: hidden;
+    z-index: 3;
 }
 
 
