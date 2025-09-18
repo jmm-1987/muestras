@@ -430,7 +430,7 @@ body::before {
 
 /* Models Section */
 .models-section {
-    padding: 8rem 0;
+    padding: 2rem 0 4rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
@@ -964,7 +964,7 @@ body::before {
 
 /* Features Section */
 .features-section {
-    padding: 8rem 0;
+    padding: 4rem 0 8rem 0;
     background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
     position: relative;
     overflow: hidden;
@@ -1105,7 +1105,7 @@ body::before {
 /* Trial Section */
 .trial-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80');
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(160, 82, 45, 0.8) 50%, rgba(205, 133, 63, 0.8) 100%), url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1147,7 +1147,7 @@ body::before {
     font-weight: 700;
     color: #333;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #8B4513, #A0522D, #CD853F);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1162,13 +1162,13 @@ body::before {
 .trial-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #8B4513, #A0522D, #CD853F);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 2rem;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
 }
 
 .trial-icon i {
@@ -1193,12 +1193,12 @@ body::before {
 }
 
 .trial-features i {
-    color: #667eea;
+    color: #8B4513;
     font-size: 1.1rem;
 }
 
 .btn-trial {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #8B4513, #A0522D, #CD853F);
     color: white;
     border: none;
     padding: 1rem 2.5rem;
@@ -1207,7 +1207,7 @@ body::before {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -1229,7 +1229,7 @@ body::before {
 
 .btn-trial:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.4);
 }
 
 .pricing-section .section-title {

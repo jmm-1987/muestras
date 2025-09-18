@@ -1,8 +1,9 @@
 // Funciones de navegación suave
 function scrollToModels() {
-    document.getElementById('models').scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+    // Scroll suave hasta la sección de modelos
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
     });
 }
 
@@ -14,13 +15,13 @@ function scrollToPricing() {
 }
 
 function entrarAplicacion() {
-    // Aquí puedes cambiar la URL por la de tu aplicación
-    window.open('https://app.webestetica.com', '_blank');
+    // Redirigir a la aplicación de barbería
+    window.open('https://modelo-barber.onrender.com', '_blank');
 }
 
 function entrarPanelControl() {
     // Aquí puedes cambiar la URL por la de tu panel de control
-    window.open('https://panel.webestetica.com', '_blank');
+    window.open('https://modelo-barber.onrender.com/panel','_blank');
 }
 
 // Función para abrir WhatsApp
