@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Simple</title>
+    <style>
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .model-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            min-height: 300px;
+        }
+        
+        .model-preview {
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .model-image-container {
+            position: relative;
+            margin-bottom: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .model-image {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .model-actions {
+            padding: 1rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .btn-probar {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Prueba Simple de Modelos</h1>
+    
+    <div class="models-grid">
+        <!-- Modelo 1 -->
+        <div class="model-card" style="background: red;">
+            <div class="model-preview">
+                <div class="model-image-container">
+                    <img src="pelu4.png" alt="Modelo 1" class="model-image">
+                </div>
+            </div>
+            <div class="model-actions">
+                <a href="#" class="btn-probar">Probar</a>
+            </div>
+        </div>
+
+        <!-- Modelo 2 -->
+        <div class="model-card" style="background: blue;">
+            <div class="model-preview">
+                <div class="model-image-container">
+                    <img src="barber3.png" alt="Modelo 2" class="model-image">
+                </div>
+            </div>
+            <div class="model-actions">
+                <a href="#" class="btn-probar">Probar</a>
+            </div>
+        </div>
+
+        <!-- Modelo 3 -->
+        <div class="model-card" style="background: green;">
+            <div class="model-preview">
+                <div class="model-image-container">
+                    <img src="pelu4.png" alt="Modelo 3" class="model-image">
+                </div>
+            </div>
+            <div class="model-actions">
+                <a href="#" class="btn-probar">Probar</a>
+            </div>
+        </div>
+
+        <!-- Modelo 4 -->
+        <div class="model-card" style="background: yellow;">
+            <div class="model-preview">
+                <div class="model-image-container">
+                    <img src="barber3.png" alt="Modelo 4" class="model-image">
+                </div>
+            </div>
+            <div class="model-actions">
+                <a href="#" class="btn-probar">Probar</a>
+            </div>
+        </div>
+
+        <!-- Modelo 5 -->
+        <div class="model-card" style="background: purple;">
+            <div class="model-preview">
+                <div class="model-image-container">
+                    <img src="pelu4.png" alt="Modelo 5" class="model-image">
+                </div>
+            </div>
+            <div class="model-actions">
+                <a href="#" class="btn-probar">Probar</a>
+            </div>
+        </div>
+
+        <!-- Modelo 6 -->
+        <div class="model-card" style="background: orange;">
+            <div class="model-preview">
+                <div class="model-image-container">
+                    <img src="barber3.png" alt="Modelo 6" class="model-image">
+                </div>
+            </div>
+            <div class="model-actions">
+                <a href="#" class="btn-probar">Probar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

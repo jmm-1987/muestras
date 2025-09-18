@@ -21,9 +21,9 @@ function openWhatsApp() {
     window.open(url, '_blank');
 }
 
-// Animaciones al hacer scroll
+// Animaciones al hacer scroll (solo para feature-item y pricing-card)
 function handleScrollAnimations() {
-    const elements = document.querySelectorAll('.model-card, .feature-item, .pricing-card');
+    const elements = document.querySelectorAll('.feature-item, .pricing-card');
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -82,9 +82,9 @@ function animateCounters() {
     });
 }
 
-// Efecto de hover mejorado para las tarjetas
+// Efecto de hover mejorado para las tarjetas (solo pricing-card)
 function enhanceCardHovers() {
-    const cards = document.querySelectorAll('.model-card, .pricing-card');
+    const cards = document.querySelectorAll('.pricing-card');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -223,9 +223,9 @@ function createCustomCursor() {
     });
 }
 
-// Efecto de parallax mejorado
+// Efecto de parallax mejorado (solo para feature-item y pricing-card)
 function enhancedParallax() {
-    const elements = document.querySelectorAll('.model-card, .feature-item, .pricing-card');
+    const elements = document.querySelectorAll('.feature-item, .pricing-card');
     
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
