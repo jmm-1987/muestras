@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Peluquería - Estilo Nocturno</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: 'Source Sans Pro', 'Arial', sans-serif; 
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 25%, #9c27b0 50%, #673ab7 75%, #3f51b5 100%);
+            color: #2c2c54; 
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Estrellas suaves y armónicas */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 25px 35px, rgba(255,255,255,1), transparent),
+                radial-gradient(2px 2px at 45px 75px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 95px 45px, rgba(255,255,255,1), transparent),
+                radial-gradient(2px 2px at 135px 85px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 165px 35px, rgba(255,255,255,1), transparent),
+                radial-gradient(1px 1px at 200px 50px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(2px 2px at 50px 100px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 120px 20px, rgba(255,255,255,1), transparent);
+            background-repeat: repeat;
+            background-size: 250px 150px;
+            animation: gentleTwinkle 8s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+        
+        @keyframes gentleTwinkle {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        /* Luna suave */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 70%, transparent 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            animation: moonGlow 6s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+        
+        @keyframes moonGlow {
+            0% { box-shadow: 0 0 20px rgba(255,255,255,0.3); }
+            100% { box-shadow: 0 0 30px rgba(255,255,255,0.5); }
+        }
+        
+        .container { 
+            max-width: 400px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        
+        .logo { 
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem; 
+            font-weight: 700; 
+            margin-bottom: 10px; 
+            background: linear-gradient(45deg, #fff, #e8eaf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tagline { 
+            font-size: 0.9rem; 
+            opacity: 0.8; 
+            color: #5a5a8a;
+        }
+        
+        .nav { 
+            display: flex; 
+            justify-content: space-around; 
+            margin-bottom: 30px; 
+            background: rgba(255,255,255,0.2); 
+            border-radius: 25px; 
+            padding: 10px; 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .nav a { 
+            color: #2c2c54; 
+            text-decoration: none; 
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            transition: all 0.3s ease; 
+            font-size: 0.8rem; 
+            font-weight: 500;
+        }
+        
+        .nav a:hover, .nav a.active { 
+            background: rgba(255,255,255,0.4); 
+            color: #1a1a3a; 
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .hero { 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        
+        .hero h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; 
+            margin-bottom: 15px; 
+            color: #1a1a3a;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero p { 
+            font-size: 0.9rem; 
+            opacity: 0.9; 
+            margin-bottom: 20px; 
+            color: #5a5a8a;
+        }
+        
+        .btn { 
+            background: linear-gradient(45deg, #9c27b0, #673ab7); 
+            color: white; 
+            padding: 12px 30px; 
+            border: none; 
+            border-radius: 25px; 
+            font-weight: bold; 
+            text-decoration: none; 
+            display: inline-block; 
+            transition: all 0.3s ease; 
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+        }
+        
+        .btn:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+            background: linear-gradient(45deg, #8e24aa, #5e35b1);
+        }
+        
+        .treatments { 
+            margin-bottom: 30px; 
+        }
+        
+        .treatments h2 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem; 
+            margin-bottom: 20px; 
+            text-align: center; 
+            color: #1a1a3a;
+        }
+        
+        .treatment-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+        }
+        
+        .treatment-item { 
+            background: rgba(255,255,255,0.25); 
+            padding: 15px; 
+            border-radius: 15px; 
+            text-align: center; 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .treatment-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.35);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .treatment-item h3 { 
+            font-size: 0.9rem; 
+            margin-bottom: 5px; 
+            color: #1a1a3a;
+        }
+        
+        .treatment-item p { 
+            font-size: 0.8rem; 
+            opacity: 0.8; 
+            color: #5a5a8a;
+        }
+        
+        .vip { 
+            background: rgba(255,255,255,0.25); 
+            padding: 20px; 
+            border-radius: 15px; 
+            margin-bottom: 20px; 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .vip h3 { 
+            margin-bottom: 15px; 
+            text-align: center; 
+            color: #1a1a3a;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .vip-list { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+        }
+        
+        .vip-item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px; 
+            background: rgba(255,255,255,0.2); 
+            border-radius: 10px; 
+            transition: all 0.3s ease;
+        }
+        
+        .vip-item:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateX(5px);
+        }
+        
+        .vip-item .service { 
+            font-size: 0.9rem; 
+            color: #2c2c54;
+        }
+        
+        .vip-item .price { 
+            font-weight: bold; 
+            color: #9c27b0;
+        }
+        
+        .premium { 
+            background: linear-gradient(45deg, #fff, #f8f9ff); 
+            color: #2c2c54; 
+            padding: 20px; 
+            border-radius: 15px; 
+            text-align: center; 
+            margin-bottom: 20px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        
+        .premium h3 { 
+            margin-bottom: 10px; 
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .premium p { 
+            font-size: 0.9rem; 
+            margin-bottom: 15px; 
+        }
+        
+        .contact { 
+            background: rgba(255,255,255,0.25); 
+            padding: 20px; 
+            border-radius: 15px; 
+            text-align: center; 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact h3 { 
+            margin-bottom: 15px; 
+            color: #1a1a3a;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .contact-info { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+        }
+        
+        .contact-item { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; 
+            font-size: 0.9rem; 
+            color: #5a5a8a;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            body::after {
+                width: 40px;
+                height: 40px;
+                top: 15px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🌙 Luna Peluquería</div>
+            <div class="tagline">Estilo bajo la luna</div>
+        </div>
+        
+        <nav class="nav">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Galería</a>
+            <a href="#">Citas</a>
+        </nav>
+        
+        <div class="hero">
+            <h1>Estilo Nocturno</h1>
+            <p>Cortes y peinados únicos bajo la luz de la luna</p>
+            <a href="#" class="btn">Reservar Cita</a>
+        </div>
+        
+        
+        <div class="vip">
+            <h3>Servicios VIP Nocturnos</h3>
+            <div class="vip-list">
+                <div class="vip-item">
+                    <span class="service">Transformación completa</span>
+                    <span class="price">120€</span>
+                </div>
+                <div class="vip-item">
+                    <span class="service">Peinado de gala</span>
+                    <span class="price">80€</span>
+                </div>
+                <div class="vip-item">
+                    <span class="service">Color premium</span>
+                    <span class="price">90€</span>
+                </div>
+                <div class="vip-item">
+                    <span class="service">Tratamiento capilar</span>
+                    <span class="price">60€</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="premium">
+            <h3>✨ Experiencia Lunar Premium</h3>
+            <p>Servicios exclusivos de peluquería bajo la luz de la luna</p>
+            <a href="#" class="btn" style="background: #673ab7; color: white;">Solicitar Información</a>
+        </div>
+        
+        <div class="contact">
+            <h3>Contacto</h3>
+            <div class="contact-info">
+                <div class="contact-item"><span>📞</span><span>+34 600 123 456</span></div>
+                <div class="contact-item"><span>📍</span><span>Calle Luna 123</span></div>
+                <div class="contact-item"><span>🌙</span><span>Lun-Sáb: 18:00-01:00</span></div>
+                <div class="contact-item"><span>✂️</span><span>Citas nocturnas disponibles</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
