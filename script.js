@@ -325,7 +325,7 @@ function showLoadingAnimation() {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg,rgb(3, 3, 3) 0%,rgb(61, 60, 61) 100%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -336,7 +336,7 @@ function showLoadingAnimation() {
     loader.innerHTML = `
         <div style="text-align: center; color: white;">
             <div style="width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3); border-top: 3px solid white; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
-            <p>Cargando modelos...</p>
+            <p>Abiendo el catálogo...</p>
         </div>
     `;
     

@@ -201,7 +201,7 @@ body::before {
 
 .tagline {
     font-size: 1.6rem;
-    opacity: 0;
+    opacity: 1;
     position: relative;
     z-index: 10;
     font-weight: 400;
@@ -213,20 +213,17 @@ body::before {
     margin-right: auto;
     line-height: 1.6;
     background: linear-gradient(45deg, #fff, #f0f8ff, #e6f3ff);
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-    animation: typewriterEffect 3s ease-out 1s both, gradientShift 4s ease-in-out infinite 4s;
+    color: #fff;
 }
 
 .tagline::after {
-    content: '|';
-    color: #fff;
-    font-weight: 300;
-    animation: blink 1s infinite;
-    margin-left: 2px;
+    content: '';
 }
 
 @keyframes glow {
@@ -1779,4 +1776,6 @@ html {
     position: relative;
     z-index: 2;
 }
+
+/* Actualización: efectos de letras eliminados - 2024 */
 
