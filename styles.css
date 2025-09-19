@@ -427,7 +427,7 @@ body::before {
 
 /* Models Section */
 .models-section {
-    padding: 2rem 0 4rem 0;
+    padding: 2rem 0 2rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
@@ -961,8 +961,12 @@ body::before {
 
 /* Features Section */
 .features-section {
-    padding: 4rem 0 8rem 0;
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding: 2rem 0 8rem 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.30) 0%, rgba(248,249,250,0.30) 100%), url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
     z-index: 2;
