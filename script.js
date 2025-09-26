@@ -26,7 +26,7 @@ function entrarPanelControl() {
 
 // Función para abrir WhatsApp
 function openWhatsApp() {
-    const phoneNumber = '34600123456'; // Cambia este número por el tuyo
+    const phoneNumber = '34625433667'; // Número de WhatsApp actualizado
     const message = 'Hola! Me interesa conocer más sobre los modelos de páginas web para mi negocio de estética.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

@@ -172,16 +172,25 @@ body::before {
     z-index: 10;
     margin-bottom: 2rem;
     animation: slideInDown 1s ease-out;
+    text-align: center;
 }
 
-.logo i {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.logo i,
+.logo-image {
+    font-size: 8rem;
+    margin: 0 auto 1rem auto;
     display: block;
     animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     position: relative;
     z-index: 10;
+}
+
+.logo-image {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
 }
 
 .logo h1 {
@@ -427,12 +436,11 @@ body::before {
 
 /* Models Section */
 .models-section {
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0 1rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
     z-index: 2;
-    margin-top: 100vh;
     padding-top: 2rem;
 }
 
@@ -961,7 +969,7 @@ body::before {
 
 /* Features Section */
 .features-section {
-    padding: 2rem 0 8rem 0;
+    padding: 1rem 0 8rem 0;
     background: linear-gradient(135deg, rgba(255,255,255,0.30) 0%, rgba(248,249,250,0.30) 100%), url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
     background-size: cover;
     background-position: center;
