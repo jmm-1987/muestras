@@ -59,10 +59,6 @@ function handleScrollEffect() {
         // Mover la sección de modelos hacia arriba gradualmente
         const translateY = -scrolled;
         modelsSection.style.transform = `translateY(${translateY}px)`;
-        
-        // Opcional: Ajustar la opacidad del header conforme se va "comiendo"
-        const headerOpacity = 1 - scrollProgress;
-        header.style.opacity = headerOpacity;
     }
 }
 
